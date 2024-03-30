@@ -14,18 +14,9 @@ public class Main {
         ArrayList<User> array = new ArrayList<>();
         User rustam = new User("rustam", "Rustam",6.5);
         array.add(rustam);
-        System.out.println("Do you have account? \n1.Yes\n2.No");
-        Scanner sc = new Scanner (System.in);
-        int i = sc.nextInt();
-        if (i==1){
          for (User user : array){
             WelcomeStation.setStation(user);
-        }}
-        else {
-            Register.register();
         }
-
-
     }
 
 }
