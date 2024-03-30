@@ -4,15 +4,16 @@
 //4. payment
 //5.
 
-import stations.Khirdalan;
 import util.User;
 import util.WelcomeStation;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        WelcomeStation.setStation();
-
+        User rustam = new User(2.5, "Rustam");
+        ArrayList<User> array = new ArrayList<>();
+        array.add(rustam);
+        for (User user : array){
+            WelcomeStation.setStation(user);
+        }
     }
-
-
 }

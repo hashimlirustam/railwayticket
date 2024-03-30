@@ -1,4 +1,4 @@
-package stations;
+package utility;
 
 
 import util.User;
@@ -9,7 +9,7 @@ public class Khirdalan {
 
 
     public static void inStation(User user){
-        System.out.println("Welcome dear "+ user.getKey());
+        System.out.println("Welcome dear "+ user.getName());
 
         System.out.println("Where u wanna go? 1. Kh 2. sumg");
 

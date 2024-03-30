@@ -1,26 +1,32 @@
 package util;
 
-import stations.Baku;
-import stations.Khirdalan;
-import stations.Sumgayit;
+import infoStation.InfoUtil;
+import utility.Baku;
+import infoStation.Station;
 
 import java.util.Scanner;
 
 public class StationChecker {
+    Baku baku;
+
     public static void stationChecker(User user){
-        System.out.println("Where u are? 1.Baku 2.Khirdalan 3.Sumgayit");
+        System.out.println("Which direction u wanna go?\n 1.Baku-Khirdalan 2.Khirdalan-Sumgayit 3.Baku-Sumgayit");
         Scanner sc = new Scanner(System.in);
         int st = sc.nextInt();
         switch (st) {
             case 1:
-                Baku.inStation(user);
+               Station.station(user, "Baku-Khirdalan direction" ,InfoUtil.BakuKh);
+               break;
             case 2:
-                Khirdalan.inStation(user);
+                Station.station(user,"Sumgayit-Khirdalan direction" ,InfoUtil.SumKh);
+                break;
             case 3:
-                Sumgayit.inStation(user);
+                Station.station(user, "Baku-Sumgayit direction"  ,InfoUtil.BakuSum);
+                break;
         }
 
 
     }
+
 
 }

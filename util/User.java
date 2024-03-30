@@ -1,26 +1,26 @@
 package util;
 
 
+import java.util.ArrayList;
+
 public class User {
+    ArrayList<User> array = new ArrayList<>();
+    double balance;
+    String name;
 
-     double balance;
-     String key;
-
-    public User(double balance , String key) {
+    public User(double balance , String name) {
         this.balance = balance;
-        this.key= key;
+        this.name= name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public String getKey() {
-        return key;
-    }
-
-    public static User orxan = new User(1.4 , "Orxan");
-    public static User rustam = new User (2.3 , "Rustam");
-
+    public static User rustam = new User(2.5, "Rustam");
 
 }
