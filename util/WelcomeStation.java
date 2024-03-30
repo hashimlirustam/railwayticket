@@ -12,7 +12,7 @@ public class WelcomeStation {
         Scanner sc = new Scanner(System.in);
         String card = sc.nextLine();
         if(card.equals(user.getName())){
-            StationChecker.stationChecker(User.user);
+            StationChecker.stationChecker(user);
             //
             //
             //
