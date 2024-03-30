@@ -2,15 +2,19 @@ package util;
 
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class User {
     ArrayList<User> array = new ArrayList<>();
     double balance;
     String name;
+    String id;
 
-    public User(double balance , String name) {
+
+    public User(String id, String name , double balance) {
         this.balance = balance;
         this.name= name;
+        this.id=id;
     }
 
     public String getName() {
@@ -21,6 +25,21 @@ public class User {
         return balance;
     }
 
-    public static User rustam = new User(2.5, "Rustam");
+    public String getId() {
+        return id;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 
 }
