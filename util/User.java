@@ -2,16 +2,15 @@ package util;
 
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class User {
     ArrayList<User> array = new ArrayList<>();
     double balance;
     String name;
-    String id;
+    Integer id;
 
 
-    public User(String id, String name , double balance) {
+    public User(Integer id, String name , double balance) {
         this.balance = balance;
         this.name= name;
         this.id=id;
@@ -25,7 +24,7 @@ public class User {
         return balance;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -37,7 +36,7 @@ public class User {
         this.name = name;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

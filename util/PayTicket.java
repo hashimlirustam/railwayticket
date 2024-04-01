@@ -1,5 +1,7 @@
 package util;
 
+import infoStation.WelcomeStation;
+
 import java.util.Scanner;
 
 public class PayTicket {
@@ -10,16 +12,15 @@ public class PayTicket {
         double paymentAm = x*ammount;
         double userBalance = user.getBalance();
         if(userBalance>=paymentAm){
-            userBalance= userBalance-paymentAm;
-            System.out.println("Progressing...\n operation complated.");
-        receipt(user, station,paymentAm);}
+            userBalance -= paymentAm;
+            System.out.println("Progressing...\n operation complated." +userBalance);
+        receipt(user, station,paymentAm,userBalance);}
         else {System.out.println("Your balance isnt enought!Please increase your balance..");
         PayBalance.payBalance(user);}
     }
 
-    public static void receipt(User user, String station ,double ammount){
-        System.out.println("Name: "+user.getName()+"\nDirection: "+station+"\nPaid ammount: " +ammount+"\nBalance: "+user.getBalance()+"\nThanks for choosing us:) We are waiting u again..");
-
-
+    public static void receipt(User user, String station ,double ammount,double userBalance){
+        System.out.println("Name: "+user.getName()+"\nDirection: "+station+"\nPaid ammount: " +ammount+"\nBalance: "+userBalance+"\nThanks for choosing us:) We are waiting u again..");
+        WelcomeStation.setStation(user);
     }
 }

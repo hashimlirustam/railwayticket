@@ -12,7 +12,5 @@ public class PayBalance {
         user.setBalance(user.balance+pay);
         System.out.println("Your balance is " +user.balance);
         StationChecker.stationChecker(user);
-
-
     }
 }

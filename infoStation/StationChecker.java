@@ -10,7 +10,7 @@ public class StationChecker {
     Baku baku;
 
     public static void stationChecker(User user) {
-        System.out.println("Hey "+ user.getName() +"! Where are u?\n 1.Baku 2.Khirdalan 3.Sumgayit");
+        System.out.println("Hey "+ user.getName() +" "+user.getId()+"! Where are u?\n 1.Baku 2.Khirdalan 3.Sumgayit");
         Scanner sc = new Scanner(System.in);
         int st = sc.nextInt();
         switch (st) {

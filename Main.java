@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<User> array = new ArrayList<>();
-        User rustam = new User("rustam", "Rustam",6.5);
+        User rustam = new User(4169, "Rustam",6.5);
         array.add(rustam);
          for (User user : array){
             WelcomeStation.setStation(user);
