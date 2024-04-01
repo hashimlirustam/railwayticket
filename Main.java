@@ -4,18 +4,21 @@
 //4. payment
 //elave : Main.java duzelis elemeli !!!
 
-import util.Register;
 import util.User;
-import infoStation.WelcomeStation;
+import infoStation.Welcome;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        startApp();
+    }
+
+    public static void startApp(){
+        User admin = new User(4169, "Admin",99999999);
         ArrayList<User> array = new ArrayList<>();
-        User rustam = new User(4169, "Rustam",6.5);
-        array.add(rustam);
-         for (User user : array){
-            WelcomeStation.setStation(user);
+        array.add(admin);
+        for (User user : array){
+            Welcome.welcome(user);
         }
     }
 

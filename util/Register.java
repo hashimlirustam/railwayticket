@@ -1,7 +1,6 @@
 package util;
 
-import infoStation.StationChecker;
-import infoStation.WelcomeStation;
+import infoStation.Operations;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -15,6 +14,6 @@ public class Register {
         System.out.println("name:");
         user.setName(sc.next());
         System.out.println("Complated!");
-        StationChecker.stationChecker(user);
+        Operations.accountMenu(user);
     }
 }
